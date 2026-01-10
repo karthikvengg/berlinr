@@ -1,5 +1,7 @@
 import React from "react";
 import { Box, Container, Grid, Typography, Link } from "@mui/material";
+import { Instagram, LinkedIn, Mail } from "@mui/icons-material";
+import { IconButton } from "@mui/material";
 
 export default function Footer() {
   return (
@@ -9,23 +11,28 @@ export default function Footer() {
     >
       <Container maxWidth="lg">
         <Grid container spacing={3}>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={6} md={6}>
             <Typography variant="h6" sx={{ fontWeight: 800 }}>
               Neuberlinr Private Limited
             </Typography>
             <Typography
               variant="caption"
               color="text.secondary"
-              sx={{ display: "block", mt: 3 }}
+              sx={{ display: "block" }}
             >
-              © {new Date().getFullYear()} Berlinr. All rights reserved.
-            </Typography>
-            <Typography
-              variant="caption"
-              color="text.secondary"
-              sx={{ display: "block", mt: 3 }}
-            >
-              Developed by Berlinr Tech
+              CIN: U70200TN2026PTC188018
+              <br></br>
+              <br></br>
+              <b>Head office:</b>
+              <br></br>
+              No.47, Bharathi Street,
+              <br></br>
+              Tiruchirappalli- 620005, Tamil Nadu
+              <br></br>
+              <br></br>
+              <b>Opening Hours:</b>
+              <br></br>
+              Monday to Friday: 9:00 AM IST - 20:00 PM IST
             </Typography>
           </Grid>
           {/* Links Section 
@@ -64,6 +71,66 @@ export default function Footer() {
               Privacy
             </Link>
             */}
+          </Grid>
+          <Grid item xs={6} md={3}>
+            <Typography variant="subtitle1" sx={{ ml: 1 }}>
+              Follow us
+            </Typography>
+
+            <Box sx={{ mt: 2 }}>
+              <IconButton
+                component="a"
+                href="https://instagram.com/berlinr.eu"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                sx={{
+                  "&:hover": { color: "#DD0000" },
+                }}
+              >
+                <Instagram />
+              </IconButton>
+
+              <IconButton
+                component="a"
+                href="https://linkedin.com/company/berlinr"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                sx={{
+                  "&:hover": { color: "#DD0000" },
+                }}
+              >
+                <LinkedIn />
+              </IconButton>
+
+              <IconButton
+                component="a"
+                href="mailto:hello@berlinr.eu"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Mail"
+                sx={{
+                  "&:hover": { color: "#DD0000" },
+                }}
+              >
+                <Mail />
+              </IconButton>
+            </Box>
+            <Typography
+              variant="caption"
+              color="text.secondary"
+              sx={{ display: "block", mt: 3 }}
+            >
+              © {new Date().getFullYear()} Berlinr. All rights reserved.
+            </Typography>
+            <Typography
+              variant="caption"
+              color="text.secondary"
+              sx={{ display: "block", mt: 3 }}
+            >
+              Developed by Berlinr Tech
+            </Typography>
           </Grid>
         </Grid>
       </Container>
