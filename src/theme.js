@@ -8,7 +8,7 @@ const theme = createTheme({
     background: { default: '#fafafa' }
   },
   typography: {
-    fontFamily: "'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif",
+    fontFamily: "'Public Sans', sans-serif",
     h3: { fontWeight: 800, letterSpacing: '-0.02em' },
     h5: { fontWeight: 700 },
     subtitle1: { fontWeight: 600 },

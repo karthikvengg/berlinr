@@ -14,6 +14,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
 import ArticleGrid from "../components/ArticleGrid";
+import ContactForm from "../components/ContactForm";
 import { posts, categories } from "../data/posts";
 import testimonals from "../assets/testimonals.png";
 import whychooseus from "../assets/whychooseus.png";
@@ -100,14 +101,13 @@ export default function Home() {
       <Header />
       <HeroSection post={posts[0]} />
       <Container maxWidth="lg" sx={{ mt: 7 }}>
+        {/* Why Choose Us Section 
         <img
           src={whychooseus}
           alt="Landing Page Banner"
           style={{ width: "100%", height: "auto", marginBottom: "2rem" }}
         />
-        <Typography variant="h4" sx={{ fontWeight: 800, mb: 2 }}>
-          Services
-        </Typography>
+        */}
         <Tabs
           value={tab}
           onChange={(_, v) => setTab(v)}
@@ -116,6 +116,7 @@ export default function Home() {
           scrollButtons="auto"
         ></Tabs>
         <ArticleGrid posts={filtered.slice(1)} />
+        {/* Testimonials Section 
         <img
           src={testimonals}
           alt="Landing Page Banner"
@@ -126,6 +127,7 @@ export default function Home() {
             marginTop: "4rem",
           }}
         />
+        */}
 
         {/* FAQ Section */}
         <Typography variant="h4" sx={{ fontWeight: 800, mb: 2, mt: 5 }}>
@@ -143,6 +145,18 @@ export default function Home() {
             </AccordionDetails>
           </Accordion>
         ))}
+
+        <Container maxWidth="lg" sx={{ mt: 7, mb: 10 }}>
+          <Typography variant="h4" fontWeight={600} gutterBottom>
+            Contact Us
+          </Typography>
+
+          <Typography color="text.secondary" mb={4}>
+            Fill out the form below and our team will get back to you.
+          </Typography>
+
+          <ContactForm />
+        </Container>
       </Container>
       <Footer />
     </Box>

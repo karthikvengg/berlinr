@@ -11,15 +11,16 @@ import {
 import SearchIcon from "@mui/icons-material/Search";
 import { Link as RouterLink } from "react-router-dom";
 import logo from "../assets/logo.png";
-import { blue } from "@mui/material/colors";
+import { blue, yellow } from "@mui/material/colors";
 
 const buttonStyles = {
   color: "black",
-  ":hover": { backgroundColor: "#808080", fontWeight: "bold" },
   textTransform: "none",
-  width: "80px",
   fontSize: "1.0rem",
-  //fontWeight: "bold",
+  "&:hover": {
+    backgroundColor: "#DD0000",
+    color: "white",
+  },
 };
 
 export default function Header() {
@@ -27,8 +28,10 @@ export default function Header() {
     <AppBar
       position="sticky"
       color="inherit"
-      elevation={1}
-      sx={{ backgroundColor: "lightgray", borderBottom: "1px solid #eee" }}
+      elevation={0}
+      sx={{
+        boxShadow: "0 1px 4px rgba(0, 0, 0, 0.08)",
+      }}
     >
       <Container maxWidth="lg">
         <Toolbar disableGutters sx={{ gap: 2 }}>
@@ -44,13 +47,11 @@ export default function Header() {
           >
             <img
               src={logo}
-              alt="XPAT Berlin"
+              alt="Berlinr"
               style={{
                 height: 100,
-                position: "absolute",
-                backgroundColor: "black",
-                top: 10,
-                padding: 10,
+                marginTop: 10,
+                marginBottom: 10,
               }}
             />
           </Box>
@@ -66,6 +67,7 @@ export default function Header() {
             >
               Home
             </Button>
+            {/*
             <Button
               component={RouterLink}
               to="/category/news"
@@ -106,18 +108,21 @@ export default function Header() {
             >
               Why Us
             </Button>
+            */}
             <Button
               component={RouterLink}
-              to="/category/events"
+              to="/contact"
               color="inherit"
               sx={buttonStyles}
             >
               Contact
             </Button>
           </Box>
+          {/* Search Icon 
           <IconButton color="inherit">
             <SearchIcon />
           </IconButton>
+          */}
         </Toolbar>
       </Container>
     </AppBar>
