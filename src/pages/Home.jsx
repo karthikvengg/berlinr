@@ -100,7 +100,10 @@ export default function Home() {
     <Box>
       <Header />
       <HeroSection post={posts[0]} />
-      <Container maxWidth="lg" sx={{ mt: 7 }}>
+      <Container maxWidth="lg" sx={{ mt: 15 }}>
+        <Typography variant="h4" fontWeight={600}>
+          Why Us
+        </Typography>
         {/* Why Choose Us Section 
         <img
           src={whychooseus}
@@ -111,7 +114,6 @@ export default function Home() {
         <Tabs
           value={tab}
           onChange={(_, v) => setTab(v)}
-          sx={{ mb: 2 }}
           variant="scrollable"
           scrollButtons="auto"
         ></Tabs>
@@ -130,7 +132,12 @@ export default function Home() {
         */}
 
         {/* FAQ Section */}
-        <Typography variant="h4" sx={{ fontWeight: 800, mb: 2, mt: 5 }}>
+        <Typography
+          variant="h4"
+          fontWeight={600}
+          sx={{ mt: 15, mb: 5 }}
+          gutterBottom
+        >
           Frequently Asked Questions
         </Typography>
         {faqs.map((faq, index) => (
@@ -146,7 +153,7 @@ export default function Home() {
           </Accordion>
         ))}
 
-        <Container maxWidth="lg" sx={{ mt: 7, mb: 10 }}>
+        <Container maxWidth="lg" sx={{ mt: 15, mb: 10 }}>
           <Typography variant="h4" fontWeight={600} gutterBottom>
             Contact Us
           </Typography>
