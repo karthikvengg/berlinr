@@ -120,14 +120,14 @@ export default function Footer() {
             <Typography
               variant="caption"
               color="text.secondary"
-              sx={{ display: "block", mt: 3 }}
+              sx={{ display: "block", mt: 3, ml: 1 }}
             >
               © {new Date().getFullYear()} Berlinr. All rights reserved.
             </Typography>
             <Typography
               variant="caption"
               color="text.secondary"
-              sx={{ display: "block", mt: 3 }}
+              sx={{ display: "block", mt: 3, ml: 1 }}
             >
               Developed by Berlinr Tech
             </Typography>
