@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Container, Grid, Typography, Link } from "@mui/material";
 import { Instagram, LinkedIn, Mail } from "@mui/icons-material";
 import { IconButton } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -58,7 +59,12 @@ export default function Footer() {
           <Grid item xs={6} md={3}>
             <Typography variant="subtitle1">Company</Typography>
             <br />
-            <Link href="/contact" underline="none" color="inherit">
+            <Link
+              component={RouterLink}
+              to="/contact"
+              underline="none"
+              color="inherit"
+            >
               Contact
             </Link>
             <br />
