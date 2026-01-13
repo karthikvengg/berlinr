@@ -100,14 +100,6 @@ export default function Header() {
             >
               FAQs
             </Button>
-            <Button
-              component={RouterLink}
-              to="/category/events"
-              color="inherit"
-              sx={buttonStyles}
-            >
-              Why Us
-            </Button>
             */}
             <Button
               component={RouterLink}

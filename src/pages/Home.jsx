@@ -16,8 +16,7 @@ import HeroSection from "../components/HeroSection";
 import ArticleGrid from "../components/ArticleGrid";
 import ContactForm from "../components/ContactForm";
 import { posts, categories } from "../data/posts";
-import testimonals from "../assets/testimonals.png";
-import whychooseus from "../assets/whychooseus.png";
+import icons from "../assets/icons.png";
 
 export default function Home() {
   const [tab, setTab] = React.useState(0);
@@ -100,10 +99,90 @@ export default function Home() {
     <Box>
       <Header />
       <HeroSection post={posts[0]} />
+      {/* About / Mission / Vision / Values Section */}
       <Container maxWidth="lg" sx={{ mt: 15 }}>
-        <Typography variant="h4" fontWeight={600}>
+        <Typography
+          variant="h4"
+          fontWeight={600}
+          gutterBottom
+          sx={{ color: "#DD0000" }}
+        >
+          About Berlinr
+        </Typography>
+        <img src={icons} alt="Icons" style={{ width: "10%", height: "auto" }} />
+
+        <Typography color="text.secondary" variant="h6" mb={6}>
+          Berlinr is a global talent mobility platform dedicated to transforming
+          lives through meaningful international careers. We connect qualified
+          healthcare professionals with trusted employers in Germany and support
+          them through language training, professional recognition, relocation,
+          and long-term settlement.
+        </Typography>
+
+        <Box
+          display="grid"
+          gridTemplateColumns={{ xs: "1fr", md: "repeat(3, 1fr)" }}
+          gap={4}
+          mb={8}
+        >
+          <Box
+            p={4}
+            borderRadius={3}
+            boxShadow={2}
+            sx={{ ":hover": { boxShadow: 3, backgroundColor: "#EEEEEE" } }}
+          >
+            <Typography variant="h6" fontWeight={600} gutterBottom>
+              Our Mission
+            </Typography>
+            <Typography color="text.secondary">
+              To empower global healthcare professionals with seamless access to
+              international career opportunities while strengthening healthcare
+              systems with skilled and well-prepared talent.
+            </Typography>
+          </Box>
+
+          <Box
+            p={4}
+            borderRadius={3}
+            boxShadow={2}
+            sx={{ ":hover": { boxShadow: 3, backgroundColor: "#EEEEEE" } }}
+          >
+            <Typography variant="h6" fontWeight={600} gutterBottom>
+              Our Vision
+            </Typography>
+            <Typography color="text.secondary">
+              To become the most trusted global mobility partner for healthcare
+              professionals, enabling sustainable migration and better
+              healthcare outcomes worldwide.
+            </Typography>
+          </Box>
+
+          <Box
+            p={4}
+            borderRadius={3}
+            boxShadow={2}
+            sx={{ ":hover": { boxShadow: 3, backgroundColor: "#EEEEEE" } }}
+          >
+            <Typography variant="h6" fontWeight={600} gutterBottom>
+              Our Values
+            </Typography>
+            <Typography color="text.secondary">
+              Integrity, people-first approach, excellence, global inclusion,
+              and long-term commitment to every professional we support.
+            </Typography>
+          </Box>
+        </Box>
+      </Container>
+      <Container maxWidth="lg" sx={{ mt: 15 }}>
+        <Typography
+          variant="h4"
+          fontWeight={600}
+          sx={{ color: "#DD0000" }}
+          gutterBottom
+        >
           Why Us
         </Typography>
+        <img src={icons} alt="Icons" style={{ width: "10%", height: "auto" }} />
         {/* Why Choose Us Section 
         <img
           src={whychooseus}
@@ -130,16 +209,16 @@ export default function Home() {
           }}
         />
         */}
-
         {/* FAQ Section */}
         <Typography
           variant="h4"
           fontWeight={600}
-          sx={{ mt: 15, mb: 5 }}
+          sx={{ mt: 15, color: "#DD0000" }}
           gutterBottom
         >
           Frequently Asked Questions
         </Typography>
+        <img src={icons} alt="Icons" style={{ width: "10%", height: "auto" }} />
         {faqs.map((faq, index) => (
           <Accordion key={index}>
             <AccordionSummary expandIcon={<ExpandMoreIcon />}>
@@ -152,12 +231,20 @@ export default function Home() {
             </AccordionDetails>
           </Accordion>
         ))}
-
         <Container maxWidth="lg" sx={{ mt: 15, mb: 10 }}>
-          <Typography variant="h4" fontWeight={600} gutterBottom>
+          <Typography
+            variant="h4"
+            fontWeight={600}
+            sx={{ color: "#DD0000" }}
+            gutterBottom
+          >
             Contact Us
           </Typography>
-
+          <img
+            src={icons}
+            alt="Icons"
+            style={{ width: "10%", height: "auto" }}
+          />
           <Typography color="text.secondary" mb={4}>
             Fill out the form below and our team will get back to you.
           </Typography>
