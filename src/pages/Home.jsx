@@ -183,13 +183,6 @@ export default function Home() {
           Why Us
         </Typography>
         <img src={icons} alt="Icons" style={{ width: "10%", height: "auto" }} />
-        {/* Why Choose Us Section 
-        <img
-          src={whychooseus}
-          alt="Landing Page Banner"
-          style={{ width: "100%", height: "auto", marginBottom: "2rem" }}
-        />
-        */}
         <Tabs
           value={tab}
           onChange={(_, v) => setTab(v)}
