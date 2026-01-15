@@ -130,7 +130,7 @@ export default function Footer() {
 
               <IconButton
                 component="a"
-                href="mailto:hello@berlinr.eu"
+                href="mailto:karthik@berlinr.eu"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Mail"
@@ -153,7 +153,7 @@ export default function Footer() {
               color="text.secondary"
               sx={{ display: "block", mt: 3, ml: 1 }}
             >
-              Developed by Berlinr Tech
+              Developed by Berlinr Tech Team
             </Typography>
           </Grid>
         </Grid>
