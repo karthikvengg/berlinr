@@ -12,27 +12,18 @@ import {
   Tooltip,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 const buttonStyles = {
   color: "black",
   textTransform: "none",
   fontSize: "1rem",
-  "&:hover": {
-    backgroundColor: "#DD0000",
-    color: "white",
-  },
 };
-
-const pages = [
-  { label: "Home", path: "/" },
-  { label: "Jobs", path: "/jobs" },
-  { label: "Contact", path: "/contact" },
-];
 
 export default function Header() {
   const [anchorEl, setAnchorEl] = useState(null);
+  const location = useLocation(); // <-- Get current path
 
   const handleOpenMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -41,6 +32,21 @@ export default function Header() {
   const handleCloseMenu = () => {
     setAnchorEl(null);
   };
+
+  const pages = [
+    { label: "Home", path: "/" },
+    { label: "Jobs", path: "/jobs" },
+    { label: "Contact", path: "/contact" },
+  ];
+
+  const getButtonStyle = (path) => ({
+    ...buttonStyles,
+    color: location.pathname === path ? "#DD0000" : "black",
+    borderBottom:
+      location.pathname === path
+        ? "2px solid #DD0000"
+        : "2px solid transparent",
+  });
 
   return (
     <AppBar
@@ -83,7 +89,7 @@ export default function Header() {
                 key={page.label}
                 component={RouterLink}
                 to={page.path}
-                sx={buttonStyles}
+                sx={getButtonStyle(page.path)}
               >
                 {page.label}
               </Button>
@@ -116,6 +122,7 @@ export default function Header() {
                   component={RouterLink}
                   to={page.path}
                   onClick={handleCloseMenu}
+                  selected={location.pathname === page.path} // <-- active highlight
                 >
                   {page.label}
                 </MenuItem>
