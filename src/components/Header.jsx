@@ -56,9 +56,7 @@ export default function Header() {
             />
           </Box>
           <Box sx={{ flexGrow: 1 }} />
-          <Box
-            sx={{ display: { xs: "none", md: "flex" }, gap: 1, color: "white" }}
-          >
+          <Box sx={{ display: "flex", gap: 1, color: "white" }}>
             <Button
               component={RouterLink}
               to="/"
