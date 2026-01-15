@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   AppBar,
   Toolbar,
@@ -7,34 +7,51 @@ import {
   IconButton,
   Button,
   Container,
+  Menu,
+  MenuItem,
+  Tooltip,
 } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
+import MenuIcon from "@mui/icons-material/Menu";
 import { Link as RouterLink } from "react-router-dom";
 import logo from "../assets/logo.png";
-import { blue, yellow } from "@mui/material/colors";
 
 const buttonStyles = {
   color: "black",
   textTransform: "none",
-  fontSize: "1.0rem",
+  fontSize: "1rem",
   "&:hover": {
     backgroundColor: "#DD0000",
     color: "white",
   },
 };
 
+const pages = [
+  { label: "Home", path: "/" },
+  { label: "Jobs", path: "/jobs" },
+  { label: "Contact", path: "/contact" },
+];
+
 export default function Header() {
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleOpenMenu = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleCloseMenu = () => {
+    setAnchorEl(null);
+  };
+
   return (
     <AppBar
       position="sticky"
       color="inherit"
       elevation={0}
-      sx={{
-        boxShadow: "0 1px 4px rgba(0, 0, 0, 0.08)",
-      }}
+      sx={{ boxShadow: "0 1px 2px rgba(0, 0, 0, 0.01)" }}
     >
       <Container maxWidth="lg">
         <Toolbar disableGutters sx={{ gap: 2 }}>
+          {/* Logo */}
           <Box
             component={RouterLink}
             to="/"
@@ -55,72 +72,56 @@ export default function Header() {
               }}
             />
           </Box>
+
+          {/* Spacer */}
           <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: "flex", gap: 1, color: "white" }}>
-            <Button
-              component={RouterLink}
-              to="/"
-              color="inherit"
-              sx={buttonStyles}
-            >
-              Home
-            </Button>
-            {/*
-            <Button
-              component={RouterLink}
-              to="/category/news"
-              color="inherit"
-              sx={buttonStyles}
-            >
-              Services
-            </Button>
-            <Button
-              component={RouterLink}
-              to="/category/guides"
-              color="inherit"
-              sx={buttonStyles}
-            >
-              About
-            </Button>
-            <Button
-              component={RouterLink}
-              to="/category/life"
-              color="inherit"
-              sx={buttonStyles}
-            >
-              Reviews
-            </Button>
-            <Button
-              component={RouterLink}
-              to="/category/events"
-              color="inherit"
-              sx={buttonStyles}
-            >
-              FAQs
-            </Button>
-            */}
-            <Button
-              component={RouterLink}
-              to="/jobs"
-              color="inherit"
-              sx={buttonStyles}
-            >
-              Jobs
-            </Button>
-            <Button
-              component={RouterLink}
-              to="/contact"
-              color="inherit"
-              sx={buttonStyles}
-            >
-              Contact
-            </Button>
+
+          {/* Desktop Menu */}
+          <Box sx={{ display: { xs: "none", md: "flex" }, gap: 1 }}>
+            {pages.map((page) => (
+              <Button
+                key={page.label}
+                component={RouterLink}
+                to={page.path}
+                sx={buttonStyles}
+              >
+                {page.label}
+              </Button>
+            ))}
           </Box>
-          {/* Search Icon 
-          <IconButton color="inherit">
-            <SearchIcon />
-          </IconButton>
-          */}
+
+          {/* Mobile Menu */}
+          <Box sx={{ display: { xs: "flex", md: "none" } }}>
+            <Tooltip title="Menu">
+              <IconButton onClick={handleOpenMenu} color="inherit">
+                <MenuIcon />
+              </IconButton>
+            </Tooltip>
+            <Menu
+              anchorEl={anchorEl}
+              open={Boolean(anchorEl)}
+              onClose={handleCloseMenu}
+              anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "right",
+              }}
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "right",
+              }}
+            >
+              {pages.map((page) => (
+                <MenuItem
+                  key={page.label}
+                  component={RouterLink}
+                  to={page.path}
+                  onClick={handleCloseMenu}
+                >
+                  {page.label}
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>
