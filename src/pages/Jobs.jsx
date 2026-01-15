@@ -17,7 +17,7 @@ const jobs = [
     id: 1,
     title: "Full Stack Developer – Entry Level",
     description:
-      "Freshers welcome. Must have HTML, CSS, JavaScript, database, Git. Good to have React/Node.js. CI/CD, Kubernetes, Docker, Cloud experience a plus.",
+      "We welcome freshers with a passion for web development. Must have a strong foundation in HTML, CSS, JavaScript, and database management. Experience with Git is required. Knowledge of React and Node.js is a plus. Familiarity with CI/CD pipelines, Kubernetes, Docker, and cloud platforms will be an added advantage.",
     location: "Madurai (On-site / Remote)",
     type: "Full Time",
     apply: "hello@berlinr.eu",
@@ -27,7 +27,7 @@ const jobs = [
     id: 2,
     title: "Sales and Operations Executive",
     description:
-      "Support branch setup & launch, counsel students, manage administrative tasks, candidate database, local outreach.",
+      "Join our team to support branch setup and launch, guide and counsel students, manage administrative tasks, maintain candidate databases, and conduct local outreach. Ideal for organized, proactive individuals who enjoy working in a dynamic environment.",
     location: "Madurai (Full-Time, Offline)",
     type: "Full Time",
     apply: "hello@berlinr.eu / WhatsApp +49 172 6474278",
