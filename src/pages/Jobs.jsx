@@ -20,7 +20,7 @@ const jobs = [
       "We welcome freshers with a passion for web development. Must have a strong foundation in HTML, CSS, JavaScript, and database management. Experience with Git is required. Knowledge of React and Node.js is a plus. Familiarity with CI/CD pipelines, Kubernetes, Docker, and cloud platforms will be an added advantage.",
     location: "Madurai (On-site)",
     type: "Full Time",
-    apply: "karthik@berlinr.eu",
+    apply: "career@berlinr.eu",
     salary: "₹3 LPA Take home",
   },
   {
@@ -30,7 +30,7 @@ const jobs = [
       "Join our team to support branch setup and launch, guide and counsel students, manage administrative tasks, maintain candidate databases, and conduct local outreach. Ideal for organized, proactive individuals who enjoy working in a dynamic environment.",
     location: "Madurai (On-site)",
     type: "Full Time",
-    apply: "karthik@berlinr.eu / WhatsApp +49 172 6474278",
+    apply: "career@berlinr.eu / WhatsApp +49 172 6474278",
     salary: "₹10,000–₹20,000 INR per month",
   },
 ];

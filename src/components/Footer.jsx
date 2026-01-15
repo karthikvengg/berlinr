@@ -130,7 +130,7 @@ export default function Footer() {
 
               <IconButton
                 component="a"
-                href="mailto:karthik@berlinr.eu"
+                href="mailto:hello@berlinr.eu"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Mail"

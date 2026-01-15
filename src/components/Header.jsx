@@ -14,6 +14,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 const buttonStyles = {
   color: "black",
@@ -37,6 +38,11 @@ export default function Header() {
     { label: "Home", path: "/" },
     { label: "Jobs", path: "/jobs" },
     { label: "Contact", path: "/contact" },
+    {
+      label: "Employee Mailbox",
+      path: "https://mail.berlinr.eu",
+      external: true,
+    },
   ];
 
   const getButtonStyle = (path) => ({
@@ -87,11 +93,22 @@ export default function Header() {
             {pages.map((page) => (
               <Button
                 key={page.label}
-                component={RouterLink}
-                to={page.path}
-                sx={getButtonStyle(page.path)}
+                component={page.external ? "a" : RouterLink}
+                to={!page.external ? page.path : undefined}
+                href={page.external ? page.path : undefined}
+                target={page.external ? "_blank" : undefined}
+                rel={page.external ? "noopener noreferrer" : undefined}
+                sx={{
+                  ...getButtonStyle(page.path),
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 0.5,
+                }}
               >
                 {page.label}
+                {page.external && (
+                  <OpenInNewIcon sx={{ fontSize: "0.9rem", opacity: 0.7 }} />
+                )}
               </Button>
             ))}
           </Box>
@@ -119,12 +136,19 @@ export default function Header() {
               {pages.map((page) => (
                 <MenuItem
                   key={page.label}
-                  component={RouterLink}
-                  to={page.path}
+                  component={page.external ? "a" : RouterLink}
+                  to={!page.external ? page.path : undefined}
+                  href={page.external ? page.path : undefined}
+                  target={page.external ? "_blank" : undefined}
+                  rel={page.external ? "noopener noreferrer" : undefined}
                   onClick={handleCloseMenu}
-                  selected={location.pathname === page.path} // <-- active highlight
+                  selected={!page.external && location.pathname === page.path}
+                  sx={{ display: "flex", alignItems: "center", gap: 1 }}
                 >
                   {page.label}
+                  {page.external && (
+                    <OpenInNewIcon sx={{ fontSize: "1rem", opacity: 0.6 }} />
+                  )}
                 </MenuItem>
               ))}
             </Menu>
