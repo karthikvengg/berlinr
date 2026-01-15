@@ -103,6 +103,14 @@ export default function Header() {
             */}
             <Button
               component={RouterLink}
+              to="/jobs"
+              color="inherit"
+              sx={buttonStyles}
+            >
+              Jobs
+            </Button>
+            <Button
+              component={RouterLink}
               to="/contact"
               color="inherit"
               sx={buttonStyles}

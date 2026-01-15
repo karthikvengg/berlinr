@@ -61,18 +61,16 @@ export default function ContactForm() {
             px: "34px",
             py: "10px",
             width: "200px",
-            fontSize: "1rem",
-            fontWeight: 600,
             borderRadius: "4px",
             backgroundColor: "#DD0000",
             color: "white",
             textTransform: "none",
             "&:hover": {
-              backgroundColor: "#b50202",
+              backgroundColor: "black",
             },
           }}
         >
-          Send Enquiry
+          SEND ENQUIRY
         </Button>
       </Stack>
     </Box>

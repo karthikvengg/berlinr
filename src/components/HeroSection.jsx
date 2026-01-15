@@ -15,8 +15,15 @@ export default function HeroSection({ post }) {
           filter: "brightness(0.75)",
         }}
       />
-      <Container maxWidth="lg" sx={{ position: "relative", mt: -18 }}>
-        <Box sx={{ p: 2, bgcolor: "rgba(0,0,0,0.6)", borderRadius: 2 }}>
+      <Container maxWidth="lg" sx={{ position: "relative" }}>
+        <Box
+          sx={{
+            p: 2,
+            bgcolor: "rgba(0,0,0,0.6)",
+            borderRadius: 2,
+            marginTop: -28,
+          }}
+        >
           <Stack direction="row" spacing={1} sx={{ mb: 1 }}>
             <Typography variant="caption" sx={{ opacity: 0.9 }}>
               {post.date}
@@ -37,23 +44,21 @@ export default function HeroSection({ post }) {
             component={RouterLink}
             to="/contact"
             sx={{
-              float: "right",
-              mt: "-4rem",
-              mr: "2rem",
+              mt: 3,
+              display: "inline-block", // change from "block" to "inline-block"
               px: "34px",
               py: "10px",
               fontSize: "1rem",
-              fontWeight: 600,
-              borderRadius: "4px",
               backgroundColor: "#DD0000",
               color: "white",
               textTransform: "none",
+              alignSelf: { xs: "center", md: "flex-end" },
               "&:hover": {
                 backgroundColor: "#b50202",
               },
             }}
           >
-            Get in touch
+            GET IN TOUCH
           </Button>
         </Box>
       </Container>

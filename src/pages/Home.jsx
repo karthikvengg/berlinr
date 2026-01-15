@@ -190,18 +190,6 @@ export default function Home() {
           scrollButtons="auto"
         ></Tabs>
         <ArticleGrid posts={filtered.slice(1)} />
-        {/* Testimonials Section 
-        <img
-          src={testimonals}
-          alt="Landing Page Banner"
-          style={{
-            width: "100%",
-            height: "auto",
-            marginBottom: "2rem",
-            marginTop: "4rem",
-          }}
-        />
-        */}
         {/* FAQ Section */}
         <Typography
           variant="h4"

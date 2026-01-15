@@ -5,8 +5,8 @@ import { ThemeProvider, CssBaseline } from "@mui/material";
 import theme from "./theme";
 import Home from "./pages/Home";
 import Article from "./pages/Article";
-import Category from "./pages/Category";
 import Contact from "./pages/Contact";
+import Jobs from "./pages/Jobs";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -16,8 +16,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/article/:slug" element={<Article />} />
-          <Route path="/category/:slug" element={<Category />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/jobs" element={<Jobs />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
