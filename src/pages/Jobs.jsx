@@ -60,7 +60,13 @@ export default function Jobs() {
           <Typography>No job openings available.</Typography>
         ) : (
           jobs.map((job) => (
-            <Card key={job.id} sx={{ mb: 3 }}>
+            <Card
+              key={job.id}
+              sx={{
+                mb: 3,
+                ":hover": { boxShadow: 2, backgroundColor: "#F5F5F5" },
+              }}
+            >
               <CardContent>
                 <Typography variant="h6" fontWeight={600}>
                   {job.title}

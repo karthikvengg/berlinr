@@ -36,8 +36,9 @@ export default function Header() {
 
   const pages = [
     { label: "Home", path: "/" },
-    { label: "Jobs", path: "/jobs" },
-    { label: "Contact", path: "/contact" },
+    { label: "About Us", path: "/about" },
+    { label: "Contact Us", path: "/contact" },
+    { label: "Career", path: "/jobs" },
     {
       label: "Employee Mailbox",
       path: "https://mail.berlinr.eu",

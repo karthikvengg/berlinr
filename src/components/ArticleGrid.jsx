@@ -6,7 +6,7 @@ export default function ArticleGrid({ posts }) {
   return (
     <Grid container spacing={2}>
       {posts.map((p) => (
-        <Grid key={p.id} item xs={12} sm={6} md={4} sx={{ mt: -4 }}>
+        <Grid key={p.id} item xs={12} sm={6} md={4} sx={{ mt: 0 }}>
           <ArticleCard post={p} />
         </Grid>
       ))}

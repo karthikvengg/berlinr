@@ -86,15 +86,15 @@ export default function Footer() {
               Contact
             </Link>
             <br />
-            {/*
-            <Link href="#" underline="none" color="inherit">
+            <Link
+              component={RouterLink}
+              to="/about"
+              underline="none"
+              color="inherit"
+            >
               About
             </Link>
             <br />
-            <Link href="#" underline="none" color="inherit">
-              Privacy
-            </Link>
-            */}
           </Grid>
           <Grid item xs={6} md={3}>
             <Typography variant="subtitle1" sx={{ ml: 1 }}>

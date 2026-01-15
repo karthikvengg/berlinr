@@ -14,8 +14,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
 import ArticleGrid from "../components/ArticleGrid";
-import ContactForm from "../components/ContactForm";
 import { posts, categories } from "../data/posts";
+import ContactForm from "../components/ContactForm";
 import icons from "../assets/icons.png";
 
 export default function Home() {
@@ -128,8 +128,8 @@ export default function Home() {
           <Box
             p={4}
             borderRadius={3}
-            boxShadow={2}
-            sx={{ ":hover": { boxShadow: 3, backgroundColor: "#EEEEEE" } }}
+            boxShadow={1}
+            sx={{ ":hover": { boxShadow: 2, backgroundColor: "#F5F5F5" } }}
           >
             <Typography variant="h6" fontWeight={600} gutterBottom>
               Our Mission
@@ -144,8 +144,8 @@ export default function Home() {
           <Box
             p={4}
             borderRadius={3}
-            boxShadow={2}
-            sx={{ ":hover": { boxShadow: 3, backgroundColor: "#EEEEEE" } }}
+            boxShadow={1}
+            sx={{ ":hover": { boxShadow: 2, backgroundColor: "#F5F5F5" } }}
           >
             <Typography variant="h6" fontWeight={600} gutterBottom>
               Our Vision
@@ -160,8 +160,8 @@ export default function Home() {
           <Box
             p={4}
             borderRadius={3}
-            boxShadow={2}
-            sx={{ ":hover": { boxShadow: 3, backgroundColor: "#EEEEEE" } }}
+            boxShadow={1}
+            sx={{ ":hover": { boxShadow: 2, backgroundColor: "#F5F5F5" } }}
           >
             <Typography variant="h6" fontWeight={600} gutterBottom>
               Our Values
