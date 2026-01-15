@@ -61,6 +61,24 @@ export default function Footer() {
             <br />
             <Link
               component={RouterLink}
+              to="/"
+              underline="none"
+              color="inherit"
+            >
+              Home
+            </Link>
+            <br />
+            <Link
+              component={RouterLink}
+              to="/jobs"
+              underline="none"
+              color="inherit"
+            >
+              Jobs
+            </Link>
+            <br />
+            <Link
+              component={RouterLink}
               to="/contact"
               underline="none"
               color="inherit"
