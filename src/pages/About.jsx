@@ -21,12 +21,27 @@ const teamMembers = [
   {
     name: "Muthukumar B",
     role: "Managing Director",
-    photo: "/team/muthukumar.png",
+    photo: "/team/Muthukumar.jpg",
+  },
+  {
+    name: "Logeshwaran VP",
+    role: "Director of Operations",
+    photo: "/team/Logesh.jpg",
   },
   {
     name: "Jeyaveeran P",
     role: "Head of Operations",
     photo: "/team/jeyaveeran.png",
+  },
+  {
+    name: "Gayathri M",
+    role: "Interior Designer - Freelance",
+    photo: "/team/gayu.jpg",
+  },
+  {
+    name: "Yokith S",
+    role: "Tele Sales Executive - Intern",
+    photo: "/team/Yokith.jpg",
   },
 ];
 
@@ -111,7 +126,7 @@ export default function About() {
       </Container>
 
       {/* Team Section */}
-      <Container maxWidth="lg" sx={{ mb: 12 }}>
+      <Container maxWidth="lg" sx={{ mb: 2 }}>
         <Typography
           variant="h4"
           fontWeight={600}
@@ -122,26 +137,37 @@ export default function About() {
         </Typography>
         <img src={icons} alt="Icons" style={{ width: "10%", height: "auto" }} />
 
-        <Grid container spacing={4} justifyContent="center" sx={{ mt: 1 }}>
+        <Grid container spacing={12} justifyContent="center" sx={{ mt: 1 }}>
           {teamMembers.map((member, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
               <Card
                 sx={{
                   textAlign: "center",
-                  borderRadius: 3,
-                  ":hover": { boxShadow: 4 },
+                  borderRadius: 1,
+                  ":hover": { boxShadow: 2 },
                 }}
               >
                 <Box
-                  component="img"
-                  src={member.photo}
-                  alt={member.name}
                   sx={{
                     width: "100%",
-                    height: 480,
-                    objectFit: "cover",
+                    aspectRatio: "3 / 4", // controls image box shape
+                    overflow: "hidden",
                   }}
-                />
+                >
+                  <Box
+                    component="img"
+                    src={member.photo}
+                    alt={member.name}
+                    sx={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "top", // keeps head visible
+                      display: "block",
+                    }}
+                  />
+                </Box>
+
                 <CardContent>
                   <Typography variant="h6" fontWeight={600}>
                     {member.name}

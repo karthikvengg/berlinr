@@ -31,6 +31,13 @@ export default function Footer() {
               Tiruchirappalli- 620005, Tamil Nadu
               <br></br>
               <br></br>
+              <b>Madurai office:</b>
+              <br></br>
+              No.47, Bharathi Street,
+              <br></br>
+              Tiruchirappalli- 620005, Tamil Nadu
+              <br></br>
+              <br></br>
               <b>Opening Hours:</b>
               <br></br>
               Monday to Friday: 9:00 AM IST - 20:00 PM IST
