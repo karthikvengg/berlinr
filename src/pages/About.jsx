@@ -11,22 +11,26 @@ import {
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import icons from "../assets/icons.png";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 const teamMembers = [
   {
     name: "Karthikeyan V",
     role: "Founder & CEO",
     photo: "/team/karthik.png",
+    link: "https://www.linkedin.com/in/karthikuma/",
   },
   {
     name: "Muthukumar B",
     role: "Managing Director",
     photo: "/team/Muthukumar.jpg",
+    link: "https://www.babymasala.co.in",
   },
   {
     name: "Logeshwaran VP",
     role: "Director of Operations",
     photo: "/team/Logesh.jpg",
+    link: "https://www.linkedin.com/in/logeshwaran-vp-26317134/",
   },
   {
     name: "Jeyaveeran P",
@@ -171,7 +175,28 @@ export default function About() {
                 <CardContent>
                   <Typography variant="h6" fontWeight={600}>
                     {member.name}
+                    {member.link ? (
+                      <a
+                        href={member.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ marginLeft: 8 }}
+                      >
+                        <OpenInNewIcon
+                          sx={{
+                            fontSize: "0.9rem",
+                            opacity: 0.7,
+                            color: "black",
+                          }}
+                        />
+                      </a>
+                    ) : null}
                   </Typography>
+                  <img
+                    src={icons}
+                    alt="Icons"
+                    style={{ width: "10%", height: "auto" }}
+                  />
                   <Typography color="text.secondary">{member.role}</Typography>
                 </CardContent>
               </Card>
