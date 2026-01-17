@@ -28,14 +28,14 @@ export default function Footer() {
               <br></br>
               No.47, Bharathi Street,
               <br></br>
-              Tiruchirappalli- 620005, Tamil Nadu
+              Tiruchirappalli - 620005, Tamil Nadu
               <br></br>
               <br></br>
               <b>Madurai office:</b>
               <br></br>
-              No.47, Bharathi Street,
+              No.166A, Vakkil New St, Simmakkal,
               <br></br>
-              Tiruchirappalli- 620005, Tamil Nadu
+              Madurai - 625001, Tamil Nadu
               <br></br>
               <br></br>
               <b>Opening Hours:</b>
