@@ -40,8 +40,8 @@ export default function Header() {
     { label: "Contact Us", path: "/contact" },
     { label: "Career", path: "/jobs" },
     {
-      label: "Employee Mailbox",
-      path: "https://mail.berlinr.eu",
+      label: "Employee Self Service",
+      path: "https://ess.berlinr.eu",
       external: true,
     },
   ];
