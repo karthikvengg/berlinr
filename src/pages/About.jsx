@@ -43,9 +43,19 @@ const teamMembers = [
     photo: "/team/gayu.jpg",
   },
   {
+    name: "Tamilselvi D",
+    role: "Senior Sales Executive",
+    photo: "/team/TamilselviD.jpeg",
+  },
+  {
     name: "Yokith S",
-    role: "Tele Sales Executive - Intern",
+    role: "Sales Executive Intern",
     photo: "/team/Yokith.jpg",
+  },
+  {
+    name: "Priyadharshini M",
+    role: "Sales Executive Intern",
+    photo: "/team/PriyadharshiniM.jpeg",
   },
 ];
 
@@ -126,6 +136,120 @@ export default function About() {
               and long-term commitment to every professional we support.
             </Typography>
           </Box>
+        </Box>
+      </Container>
+
+      {/* Partners Section */}
+      <Container maxWidth="lg" sx={{ mt: 10, mb: 2 }}>
+        <Typography
+          variant="h4"
+          fontWeight={600}
+          gutterBottom
+          sx={{ color: "#DD0000" }}
+        >
+          Our Partners
+        </Typography>
+        <img src={icons} alt="Icons" style={{ width: "10%", height: "auto" }} />
+
+        <Box
+          display="flex"
+          flexWrap="wrap"
+          gap={4}
+          mt={3}
+          mb={6}
+        >
+          <a
+            href="https://www.eurocas.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+          >
+            <Box
+              p={3}
+              borderRadius={3}
+              boxShadow={1}
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                height: 140,
+                width: 200,
+                ":hover": { boxShadow: 3, backgroundColor: "#F5F5F5" },
+                cursor: "pointer",
+              }}
+            >
+              <Box
+                component="img"
+                src="/partners/eurocas.png"
+                alt="EUROCAS"
+                sx={{ maxHeight: 60, maxWidth: 160, objectFit: "contain" }}
+              />
+            </Box>
+          </a>
+
+          <a
+            href="https://babymasala.co.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+          >
+            <Box
+              p={3}
+              borderRadius={3}
+              boxShadow={1}
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                height: 140,
+                width: 200,
+                ":hover": { boxShadow: 3, backgroundColor: "#F5F5F5" },
+                cursor: "pointer",
+              }}
+            >
+              <Box
+                component="img"
+                src="/partners/babymasala.png"
+                alt="Baby Masala"
+                sx={{ maxHeight: 60, maxWidth: 160, objectFit: "contain" }}
+              />
+            </Box>
+          </a>
+
+          <a
+            href="https://shoum.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+          >
+            <Box
+              p={3}
+              borderRadius={3}
+              boxShadow={1}
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                height: 140,
+                width: 200,
+                ":hover": { boxShadow: 3, backgroundColor: "#F5F5F5" },
+                cursor: "pointer",
+              }}
+            >
+              <Box
+                component="img"
+                src="/partners/shoum.png"
+                alt="Shoum"
+                sx={{ maxHeight: 60, maxWidth: 160, objectFit: "contain" }}
+              />
+              <Typography variant="caption" color="text.secondary" mt={1}>
+                Shoum Tech Solutions
+              </Typography>
+            </Box>
+          </a>
         </Box>
       </Container>
 
