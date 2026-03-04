@@ -17,6 +17,9 @@ jobs:
           username: ${{ secrets.HETZNER_USER }}
           key: ${{ secrets.HETZNER_SSH_KEY }}
           script: |
+            if [ ! -d /root/berlinr ]; then
+              git clone https://github.com/karthikvengg/berlinr.git /root/berlinr
+            fi
             cd /root/berlinr
             git pull origin main
             docker stop berlinr 2>/dev/null || true
