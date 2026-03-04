@@ -41,6 +41,7 @@ const teamMembers = [
     name: "Gayathri M",
     role: "Interior Designer - Freelance",
     photo: "/team/gayu.jpg",
+    link: "https://www.linkedin.com/in/gayathrimk727/",
   },
   {
     name: "Tamilselvi D",
