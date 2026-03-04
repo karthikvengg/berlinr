@@ -61,6 +61,7 @@ const exEmployees = [
     name: "Yokith S",
     role: "Sales Executive Intern",
     photo: "/team/Yokith.jpg",
+    link: "https://www.linkedin.com/in/yokith-s-14bb323a3/",
   },
 ];
 
@@ -371,7 +372,14 @@ export default function About() {
                   />
                 </Box>
                 <CardContent>
-                  <Typography variant="h6" fontWeight={600}>{member.name}</Typography>
+                  <Typography variant="h6" fontWeight={600}>
+                    {member.name}
+                    {member.link ? (
+                      <a href={member.link} target="_blank" rel="noopener noreferrer" style={{ marginLeft: 8 }}>
+                        <OpenInNewIcon sx={{ fontSize: "0.9rem", opacity: 0.7, color: "black" }} />
+                      </a>
+                    ) : null}
+                  </Typography>
                   <img src={icons} alt="Icons" style={{ width: "10%", height: "auto" }} />
                   <Typography color="text.secondary">{member.role}</Typography>
                 </CardContent>
