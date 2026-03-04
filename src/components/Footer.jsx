@@ -23,6 +23,8 @@ export default function Footer() {
             >
               CIN: U70200TN2026PTC188018
               <br></br>
+              GSTIN: 33AALCN1785B1ZL
+              <br></br>
               <br></br>
               <b>Head office:</b>
               <br></br>
