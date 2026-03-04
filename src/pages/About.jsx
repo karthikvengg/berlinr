@@ -46,6 +46,7 @@ const teamMembers = [
     name: "Tamilselvi D",
     role: "Senior Sales Executive",
     photo: "/team/TamilselviD.jpeg",
+    link: "https://www.linkedin.com/in/tamil-selvi-2b7938251",
   },
   {
     name: "Priyadharshini M",
