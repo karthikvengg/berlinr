@@ -53,6 +53,7 @@ const teamMembers = [
     name: "Priyadharshini M",
     role: "Sales Executive Intern",
     photo: "/team/PriyadharshiniM.jpeg",
+    link: "https://www.linkedin.com/in/priya-dharshini-undefined-06b92a370/",
   },
 ];
 
