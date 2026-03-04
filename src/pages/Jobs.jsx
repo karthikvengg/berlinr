@@ -6,6 +6,7 @@ import {
   Card,
   CardContent,
   Button,
+  Chip,
 } from "@mui/material";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -15,16 +16,6 @@ import { Link as RouterLink } from "react-router-dom";
 const jobs = [
   {
     id: 1,
-    title: "Full Stack Developer – Entry Level",
-    description:
-      "We welcome freshers with a passion for web development. Must have a strong foundation in HTML, CSS, JavaScript, and database management. Experience with Git is required. Knowledge of React and Node.js is a plus. Familiarity with CI/CD pipelines, Kubernetes, Docker, and cloud platforms will be an added advantage.",
-    location: "Madurai (On-site)",
-    type: "Full Time",
-    apply: "career@berlinr.eu",
-    salary: "₹3 LPA Take home",
-  },
-  {
-    id: 2,
     title: "Certified German Language Teacher",
     description:
       "We are looking for a certified German language teacher who is highly proficient — near-native level. The candidate must have completed at least C1 level (Goethe-Zertifikat or equivalent) and be experienced in teaching German to students preparing for language proficiency exams or relocation to Germany. Strong communication skills and a passion for teaching are essential.",
@@ -32,6 +23,17 @@ const jobs = [
     type: "Full Time",
     apply: "career@berlinr.eu",
     salary: "Based on experience",
+    isNew: true,
+  },
+  {
+    id: 2,
+    title: "Full Stack Developer – Entry Level",
+    description:
+      "We welcome freshers with a passion for web development. Must have a strong foundation in HTML, CSS, JavaScript, and database management. Experience with Git is required. Knowledge of React and Node.js is a plus. Familiarity with CI/CD pipelines, Kubernetes, Docker, and cloud platforms will be an added advantage.",
+    location: "Madurai (On-site)",
+    type: "Full Time",
+    apply: "career@berlinr.eu",
+    salary: "₹3 LPA Take home",
   },
   {
     id: 3,
@@ -78,9 +80,14 @@ export default function Jobs() {
               }}
             >
               <CardContent>
-                <Typography variant="h6" fontWeight={600}>
-                  {job.title}
-                </Typography>
+                <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                  <Typography variant="h6" fontWeight={600}>
+                    {job.title}
+                  </Typography>
+                  {job.isNew && (
+                    <Chip label="New" size="small" sx={{ backgroundColor: "#DD0000", color: "#fff", fontWeight: 600 }} />
+                  )}
+                </Box>
 
                 <Typography variant="body2" color="text.secondary">
                   {job.location} • {job.type}
