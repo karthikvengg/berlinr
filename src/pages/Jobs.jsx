@@ -25,6 +25,16 @@ const jobs = [
   },
   {
     id: 2,
+    title: "Certified German Language Teacher",
+    description:
+      "We are looking for a certified German language teacher who is highly proficient — near-native level. The candidate must have completed at least C1 level (Goethe-Zertifikat or equivalent) and be experienced in teaching German to students preparing for language proficiency exams or relocation to Germany. Strong communication skills and a passion for teaching are essential.",
+    location: "Madurai (On-site)",
+    type: "Full Time",
+    apply: "career@berlinr.eu",
+    salary: "Based on experience",
+  },
+  {
+    id: 3,
     title: "Sales and Operations Executive",
     description:
       "Join our team to support branch setup and launch, guide and counsel students, manage administrative tasks, maintain candidate databases, and conduct local outreach. Ideal for organized, proactive individuals who enjoy working in a dynamic environment.",
