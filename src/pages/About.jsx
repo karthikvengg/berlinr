@@ -342,7 +342,7 @@ export default function About() {
         >
           Ex Employees
         </Typography>
-        <img src={icons} alt="Icons" style={{ width: "10%", height: "auto", opacity: 0.4 }} />
+        <img src={icons} alt="Icons" style={{ width: "10%", height: "auto" }} />
 
         <Grid container spacing={12} justifyContent="flex-start" sx={{ mt: 1 }}>
           {exEmployees.map((member, index) => (
@@ -351,7 +351,7 @@ export default function About() {
                 sx={{
                   textAlign: "center",
                   borderRadius: 1,
-                  opacity: 0.6,
+                  ":hover": { boxShadow: 2 },
                 }}
               >
                 <Box sx={{ width: "100%", aspectRatio: "3 / 4", overflow: "hidden" }}>
@@ -365,7 +365,6 @@ export default function About() {
                       objectFit: "cover",
                       objectPosition: "top",
                       display: "block",
-                      filter: "grayscale(100%)",
                     }}
                   />
                 </Box>
