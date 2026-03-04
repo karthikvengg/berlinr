@@ -48,14 +48,17 @@ const teamMembers = [
     photo: "/team/TamilselviD.jpeg",
   },
   {
-    name: "Yokith S",
-    role: "Sales Executive Intern",
-    photo: "/team/Yokith.jpg",
-  },
-  {
     name: "Priyadharshini M",
     role: "Sales Executive Intern",
     photo: "/team/PriyadharshiniM.jpeg",
+  },
+];
+
+const exEmployees = [
+  {
+    name: "Yokith S",
+    role: "Sales Executive Intern",
+    photo: "/team/Yokith.jpg",
   },
 ];
 
@@ -321,6 +324,54 @@ export default function About() {
                     alt="Icons"
                     style={{ width: "10%", height: "auto" }}
                   />
+                  <Typography color="text.secondary">{member.role}</Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+
+      {/* Ex Employees Section */}
+      <Container maxWidth="lg" sx={{ mt: 6, mb: 6 }}>
+        <Typography
+          variant="h5"
+          fontWeight={600}
+          gutterBottom
+          sx={{ color: "#888" }}
+        >
+          Ex Employees
+        </Typography>
+        <img src={icons} alt="Icons" style={{ width: "10%", height: "auto", opacity: 0.4 }} />
+
+        <Grid container spacing={12} justifyContent="flex-start" sx={{ mt: 1 }}>
+          {exEmployees.map((member, index) => (
+            <Grid item xs={12} sm={6} md={4} key={index}>
+              <Card
+                sx={{
+                  textAlign: "center",
+                  borderRadius: 1,
+                  opacity: 0.6,
+                }}
+              >
+                <Box sx={{ width: "100%", aspectRatio: "3 / 4", overflow: "hidden" }}>
+                  <Box
+                    component="img"
+                    src={member.photo}
+                    alt={member.name}
+                    sx={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "top",
+                      display: "block",
+                      filter: "grayscale(100%)",
+                    }}
+                  />
+                </Box>
+                <CardContent>
+                  <Typography variant="h6" fontWeight={600}>{member.name}</Typography>
+                  <img src={icons} alt="Icons" style={{ width: "10%", height: "auto" }} />
                   <Typography color="text.secondary">{member.role}</Typography>
                 </CardContent>
               </Card>
