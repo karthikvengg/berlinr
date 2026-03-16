@@ -10,6 +10,8 @@ import {
   AccordionDetails,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Button from "@mui/material/Button";
+import { Link as RouterLink } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import HeroSection from "../components/HeroSection";
@@ -212,6 +214,154 @@ export default function Home() {
             </AccordionDetails>
           </Accordion>
         ))}
+        {/* IT Products teaser */}
+        <Container maxWidth="lg" sx={{ mt: 15, mb: 10 }}>
+          <Box
+            p={5}
+            borderRadius={3}
+            sx={{
+              backgroundColor: "#111",
+              color: "#fff",
+              display: "flex",
+              flexDirection: { xs: "column", md: "row" },
+              alignItems: { md: "center" },
+              justifyContent: "space-between",
+              gap: 4,
+            }}
+          >
+            <Box>
+              <Typography variant="h5" fontWeight={700} gutterBottom>
+                We also build software
+              </Typography>
+              <Typography sx={{ opacity: 0.8, maxWidth: 520 }}>
+                Berlinr develops IT products for internal use and offers them as
+                white-label solutions. Our flagship product, Berlinr BackOffice,
+                is a complete expense and invoice management system ready for
+                your business.
+              </Typography>
+            </Box>
+            <Button
+              variant="contained"
+              component={RouterLink}
+              to="/products"
+              sx={{
+                backgroundColor: "#DD0000",
+                whiteSpace: "nowrap",
+                flexShrink: 0,
+                ":hover": { backgroundColor: "#bb0000" },
+              }}
+            >
+              See our products
+            </Button>
+          </Box>
+        </Container>
+
+        <Container maxWidth="lg" sx={{ mt: 15, mb: 10 }}>
+          <Typography
+            variant="h4"
+            fontWeight={600}
+            sx={{ color: "#DD0000" }}
+            gutterBottom
+          >
+            Our Partners
+          </Typography>
+          <img src={icons} alt="Icons" style={{ width: "10%", height: "auto" }} />
+          <Box display="flex" flexWrap="wrap" gap={4} mt={3} mb={10}>
+            <a
+              href="https://www.eurocas.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              <Box
+                p={3}
+                borderRadius={3}
+                boxShadow={1}
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  height: 140,
+                  width: 200,
+                  ":hover": { boxShadow: 3, backgroundColor: "#F5F5F5" },
+                  cursor: "pointer",
+                }}
+              >
+                <Box
+                  component="img"
+                  src="/partners/eurocas.png"
+                  alt="EUROCAS"
+                  sx={{ maxHeight: 60, maxWidth: 160, objectFit: "contain" }}
+                />
+              </Box>
+            </a>
+
+            <a
+              href="https://babymasala.co.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              <Box
+                p={3}
+                borderRadius={3}
+                boxShadow={1}
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  height: 140,
+                  width: 200,
+                  ":hover": { boxShadow: 3, backgroundColor: "#F5F5F5" },
+                  cursor: "pointer",
+                }}
+              >
+                <Box
+                  component="img"
+                  src="/partners/babymasala.png"
+                  alt="Baby Masala"
+                  sx={{ maxHeight: 60, maxWidth: 160, objectFit: "contain" }}
+                />
+              </Box>
+            </a>
+
+            <a
+              href="https://shoum.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              <Box
+                p={3}
+                borderRadius={3}
+                boxShadow={1}
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  height: 140,
+                  width: 200,
+                  ":hover": { boxShadow: 3, backgroundColor: "#F5F5F5" },
+                  cursor: "pointer",
+                }}
+              >
+                <Box
+                  component="img"
+                  src="/partners/shoum.png"
+                  alt="Shoum"
+                  sx={{ maxHeight: 60, maxWidth: 160, objectFit: "contain" }}
+                />
+                <Typography variant="caption" color="text.secondary" mt={1}>
+                  Shoum Tech Solutions
+                </Typography>
+              </Box>
+            </a>
+          </Box>
+        </Container>
+
         <Container maxWidth="lg" sx={{ mt: 15, mb: 10 }}>
           <Typography
             variant="h4"

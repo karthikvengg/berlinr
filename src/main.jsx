@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Jobs from "./pages/Jobs";
 import About from "./pages/About";
+import Products from "./pages/Products";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           <Route path="/contact" element={<Contact />} />
           <Route path="/jobs" element={<Jobs />} />
           <Route path="/about" element={<About />} />
+          <Route path="/products" element={<Products />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
