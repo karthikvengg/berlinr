@@ -327,6 +327,7 @@ export default function Home() {
               </Box>
             </a>
 
+            {/* Shoum partnership hidden - can be re-enabled later
             <a
               href="https://shoum.in"
               target="_blank"
@@ -359,6 +360,7 @@ export default function Home() {
                 </Typography>
               </Box>
             </a>
+            */}
           </Box>
         </Container>
 

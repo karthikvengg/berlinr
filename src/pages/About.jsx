@@ -225,6 +225,7 @@ export default function About() {
             </Box>
           </a>
 
+          {/* Shoum partnership hidden - can be re-enabled later
           <a
             href="https://shoum.in"
             target="_blank"
@@ -257,6 +258,7 @@ export default function About() {
               </Typography>
             </Box>
           </a>
+          */}
         </Box>
       </Container>
 
